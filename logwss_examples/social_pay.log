@@ -1,0 +1,27 @@
+websocket message: type: social.payment.pending
+{
+  name: '<username>',
+  amount: '<amount>',
+  currency: '<symbol>',
+  expiryDate: '<expiry_date>'
+}
+websocket message: type: social.payment.alias.notification
+{
+  email: '<email>',
+  maxRetries: 10,
+  retriesType: 'exponential',
+  language: 'en',
+  substitutions: {
+    email: '<email>',
+    name: '<username>',
+    amount: '<amount>',
+    currency: '<symbol>',
+    expiryDate: '<expiry_date>'
+  },
+  userId: '<user>'
+websocket message: type: social.payment.success
+{
+  pocketId: '<currency_pocket>',
+  amount: '<amount>',
+  currency: '<symbol>'
+}

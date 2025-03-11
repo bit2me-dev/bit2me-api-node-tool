@@ -1,0 +1,41 @@
+{
+  "name": "bit2me-api-node-tool",
+  "version": "1.0.0",
+  "description": "NodeJS tool to help use and understand the Bit2Me Broker API",
+  "scripts": {
+    "market-quotes": "node --env-file .env marketQuotes.js",
+    "market-data": "node --env-file .env marketData.js",
+    "create-subaccount": "node --env-file .env createSubaccount.js",
+    "set-alias": "node --env-file .env setAlias.js",
+    "list-subaccounts": "node --env-file .env listSubaccounts.js",
+    "read-account": "node --env-file .env readAccount.js",
+    "add-card": "node --env-file .env addCard.js",
+    "list-cards": "node --env-file .env listCreditCards.js",
+    "get-totp": "node --env-file .env getTOTP.js",
+    "set-2fa": "node --env-file .env setTOTP.js",
+    "create-pocket": "node --env-file .env createPocket.js",
+    "list-pockets": "node --env-file .env listPockets.js",
+    "balance": "node --env-file .env pocketsBalance.js",
+    "kyc": "node --env-file .env embedKyc.js",
+    "embed": "node --env-file .env embed.js",
+    "deposit-eur": "node --env-file .env depositEUR.js",
+    "deposit-crypto": "node --env-file .env depositCrypto.js",
+    "read-tx": "node --env-file .env getTransaction.js",
+    "list-tx": "node --env-file .env listTransactions.js",
+    "list-currencies": "node --env-file .env listCurrencies.js",
+    "buy": "node --env-file .env buy.js",
+    "swap": "node --env-file .env swap.js",
+    "sell": "node --env-file .env sell.js",
+    "wd-crypto": "node --env-file .env withdrawCrypto.js",
+    "wd-fiat": "node --env-file .env withdrawEUR.js",
+    "pay": "node --env-file .env socialPay.js",
+    "jwt": "node --env-file .env jwt.js"
+  },
+  "author": "Bit2Me",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "uuid": "^11.0.3",
+    "ws": "^8.18.0"
+  }
+}

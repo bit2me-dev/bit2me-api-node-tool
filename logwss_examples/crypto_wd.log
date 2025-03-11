@@ -1,0 +1,16 @@
+websocket message: type: wallet.withdrawal.sent
+{
+  email: '<email>',
+  pocketId: '<currency_pocket>',
+  substitutions: {
+    amount: '<amount_sent>',
+    currency: '<symbol>',
+    pocketName: '<pocket_name>',
+    concept: '',
+    name: '<username>'
+  },
+  language: 'es',
+  userId: '<user>'
+}
+websocket message: type: activity.balance.refresh
+{ service: 'wallet', userId: '<user>' }

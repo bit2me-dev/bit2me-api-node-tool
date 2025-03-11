@@ -1,0 +1,24 @@
+websocket message: type: wallet.trx.received
+{
+  pocketId: '<currency_pocket>',
+  amount: '<amount_received>',
+  currency: '<symbol>',
+  transactionId: '<wallet_tx>',
+  email: '<email>',
+  langCode: 'en',
+  name: '<username>',
+  pocketName: '<pocket_name>'
+}
+websocket message: type: wallet.trx.confirmed
+{
+  pocketId: '<currency_pocket>',
+  amount: '<amount_confirmed>',
+  currency: '<symbol>',
+  transactionId: '<wallet_tx>',
+  email: '<email>',
+  langCode: 'en',
+  name: '<username>',
+  pocketName: '<pocket_name>'
+}
+websocket message: type: activity.balance.refresh
+{ service: 'wallet', userId: '<user>' }

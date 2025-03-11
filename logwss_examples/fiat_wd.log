@@ -1,0 +1,25 @@
+websocket message: type: teller.withdrawal.sent
+{
+  email: '<email>',
+  pocketId: '<eur_pocket>',
+  substitutions: {
+    amount: '<amount>',
+    currency: 'EUR',
+    pocketName: '<pocket_name>',
+    concept: '',
+    name: '<username>',
+    activityId: '<internal_id>'
+  }
+  language: 'en',
+  userId: '<user>'
+}
+websocket message: type: wallet-transaction-v1
+{
+  userId: '<user>',
+  pocketId: '<eur_pocket>',
+  amount: '<amount_sent>',
+  currency: 'EUR',
+  transactionId: '<wallet_tx>',
+  status: 'completed',
+  tellerId: '<internal_id>'
+}
