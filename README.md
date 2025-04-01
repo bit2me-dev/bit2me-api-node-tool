@@ -29,14 +29,7 @@
 - To **read an account**, execute `npm run read-account [subaccount-id]`. If `subaccount-id` is empty, will return the main account data.
 
 ### KYC
-> KYC process for main accounts MUST be passed by Bit2Me UI.
-
-For subaccounts:
-- To **pass KYC process**, execute `npm run kyc <subaccount-id>`. After that, you can pass KYC process in our embed solution.
-
-### Credit cards management
-- To **add credit card**, execute `npm run add-card [subaccount-id]`. After that, you can add a credit card in the URL you'll see in the response. If `subaccount-id` is empty, credit card will be added for main account.
-- To **list credit cards**, execute `npm run list-cards [subaccount-id]`. If `subaccount-id` is empty, will return main account credit cards.
+> KYC process is currently outside the scope of this tool. Please feel free to reach out or complete the process through the Bit2Me UI.
 
 ### Pocket management
 - To **create pocket**, execute `npm run create-pocket <currency> <name> [subaccount-id]`. If `subaccount-id` is empty, `currency` pocket will be created for main account.
@@ -44,7 +37,7 @@ For subaccounts:
 - To **get your balance**, execute `npm run balance [currency] [subaccount-id]`. If `subaccount-id` is empty, balance from main account will be returned. If `currency` is empty, will return the whole balance from your account.
 
 ### Deposit EUR
-- To **deposit EUR**, execute `npm run deposit-eur <amount> <credit-card-id> [subaccount-id]`. If `subaccount-id` is empty, `credit-card-id` MUST be from main account and EUR will still be deposited into the main account.
+- To **deposit EUR**, execute `npm run deposit-eur [subaccount-id]`. If `subaccount-id` is empty, the bank accounts of the main account will be displayed, and any EUR deposits will be credited to the main account.
 
 ### Deposit crypto
 - To **deposit crypto**, execute `npm run deposit-crypto <crypto> <network> [subaccount-id]`. If `subaccount-id` is empty, will return main account addresses.
@@ -91,9 +84,6 @@ For subaccounts:
     - Example: Alice wants to transfer Bob 0.01 ETH ➙ `npm run pay 0.01 ETH 9fb38ddd-3b09-4823-9a2e-668e9bc96964 4512ec8e-f269-4b62-aeea-c64041865b83 451450`.
 
 ### Extra section
-
-#### Embed session
-You can generate a valid session using embed signin running `npm run embed [subaccount-id]`.
 
 #### Authentication by JWT
 The authentication between Bit2Me and you can also work with the [RFC-7519 standard](https://datatracker.ietf.org/doc/html/rfc7519), popularly known as **JSON Web Token (JWT)**. This means, that if you do not want the actions of your subaccounts to depend exclusively on a backend, you can have them authenticated with a JWT. The management of this token is up to you.

@@ -1,0 +1,14 @@
+websocket message: type: teller.deposit.transfer.success
+{
+  email: '<email>',
+  pocketId: '<eur_pocket>',
+  substitutions: {
+    amount: <amount>,
+    currency: 'EUR',
+    pocketName: '<pocket_name>',
+    name: '<username>',
+    activityId: '<internal_id>'
+  },
+  language: 'en',
+  userId: '<user>'
+}
