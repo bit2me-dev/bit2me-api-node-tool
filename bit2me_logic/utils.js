@@ -16,7 +16,6 @@ const getAuthHeaders = (path, subaccount, body) => {
   
   const response = {
     headers: {
-      'Accept-Encoding': 'gzip, deflate, br, zstd',
       'x-api-key': process.env.API_KEY,
       'api-signature': signature,
       'x-nonce': nonce

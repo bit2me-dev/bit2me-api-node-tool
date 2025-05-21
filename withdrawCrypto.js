@@ -12,6 +12,7 @@ const { getTx } = require('./utils/getTx');
 
 const PROFORMA_PATH = process.env.END_W_PROFORMA;
 const EXECUTE_PROFORMA_PATH = process.env.END_WALLET_TX;
+const TRAVEL_RULE_INFO = process.env.END_TRAVEL_RULE;
 
 const args = process.argv.slice(2);
 if(args.length < 5){
@@ -82,7 +83,22 @@ const withdrawCrypto = async () => {
             );
 
             if (response.data) {
-                console.log(await getTx(response.data.id, subaccount))
+                // Travel Rule
+                const trBody = {
+                    "walletType": "unhosted",
+                    "walletOwnership": "own"
+                }
+                const trPath = TRAVEL_RULE_INFO + response.data.id;
+
+                const trResponse = await axios.post(
+                    `${process.env.SERVER}${trPath}`,
+                    trBody,
+                    getAuthHeaders(trPath, subaccount, trBody)
+                );
+
+                if (trResponse) {
+                    console.log(await getTx(response.data.id, subaccount))
+                }
             }
         }
     }catch(e) {
